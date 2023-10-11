@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     private WebDriver driver;
 
-    // By locators
+    // By locators ids
     private By username = By.id("ctl00_cphBody_Login1_UserName");
     private By password = By.id("ctl00_cphBody_Login1_Password");
     private By loginbtn = By.id("ctl00_cphBody_Login1_LoginButton");
