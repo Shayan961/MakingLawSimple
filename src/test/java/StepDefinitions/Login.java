@@ -12,7 +12,7 @@ public class Login {
     private LoginPage loginpage = new LoginPage(DriverFact.getDriver());
     @Given("user is on login page")
     public void user_is_on_login_page() {
-      DriverFact.getDriver().get("https://vlqbsynconlineqa3.spurams.com/");
+      DriverFact.getDriver().get("https://makinglawsimple.staginganideos.com/");
     }
 
     @When("user gets the title of the page")

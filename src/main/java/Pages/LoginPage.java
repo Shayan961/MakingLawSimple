@@ -7,9 +7,9 @@ public class LoginPage {
     private WebDriver driver;
 
     // By locators ids
-    private By username = By.id("ctl00_cphBody_Login1_UserName");
-    private By password = By.id("ctl00_cphBody_Login1_Password");
-    private By loginbtn = By.id("ctl00_cphBody_Login1_LoginButton");
+    private By username = By.name("email");
+    private By password = By.name("password");
+    private By loginbtn = By.className("btn btn-outline-light btn-lg px-5");
     private By forgotPwdLink = By.linkText("Forgot Your Password");
 
     // Constructor of the page class
