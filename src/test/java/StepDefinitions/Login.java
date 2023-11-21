@@ -6,6 +6,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
+
+import javax.swing.*;
 
 public class Login {
     private static String Title;
@@ -31,9 +34,17 @@ public class Login {
         Assert.assertTrue(loginpage.isForgotPwd());
     }
 
+    @When("user click on hover")
+    public void user_click_on_hover() {
+      loginpage.movetohover();
+
+    }
+
+
     @When("user enters username {string}")
     public void user_enters_username(String username) {
-       loginpage.enterUserName(username);
+
+        loginpage.enterUserName(username);
     }
 
     @When("user enters password {string}")
