@@ -17,3 +17,6 @@ Feature: Login page feature
     And user clicks on Login button
     Then user gets the title of the page
     And page title should be "law-frontend"
+
+
+
