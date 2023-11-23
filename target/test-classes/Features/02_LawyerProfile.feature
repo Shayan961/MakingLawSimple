@@ -3,7 +3,7 @@ Feature: lawyer profile feature
   Background:
     Given user has already logged in to application
       |username|password
-      ||VLDir@23
+      |slawyer2@yopmail.com|Test123#
 
 
   Scenario: Account page title

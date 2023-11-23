@@ -1,5 +1,6 @@
+@runFirst
 Feature: Login page feature
-@signin
+
   Scenario: Login page title
     Given user is on login page
     When user gets the title of the page
@@ -8,7 +9,7 @@ Feature: Login page feature
 #  Scenario: Forgot Password link
 #    Given user is on login page
 #    Then forgot your password link should be displayed
-  @signin
+
   Scenario: Login with correct credentials
     Given user is on login page
     When user click on hover
