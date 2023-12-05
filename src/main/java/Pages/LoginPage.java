@@ -13,7 +13,7 @@ public class LoginPage {
     // By locators ids
     private By hover =By.cssSelector(".homepage-circles.d-flex.flex-column.align-items-center.justify-content-center.bg-black.text-white");
 
-    private By signinbtn = By.linkText("Sign in");
+    private By signinbtn = By.xpath("/html/body/div/div/div[2]/div[2]/div[2]/div/div/button");
     private By username = By.xpath("/html/body/div/div/div[2]/div/div/div/form/div[1]/div/input");
     private By password = By.name("password");
     private By loginbtn = By.cssSelector(".btn.btn-outline-light.btn-lg.px-5");
@@ -28,8 +28,10 @@ public class LoginPage {
     }
     // Page actions: features(behavior) of the page the form of methods:
 
-    public String getLoginPageTitle(){
+    public String getLoginPageTitle()
+    {
         return driver.getTitle();
+
     }
 
     public void enterUserName(String name)
@@ -67,7 +69,8 @@ public class LoginPage {
         driver.findElement(loginbtn).click();
     }
 
-    public boolean isForgotPwd(){
+    public boolean isForgotPwd()
+    {
         return driver.findElement(forgotPwdLink).isDisplayed();
     }
 
