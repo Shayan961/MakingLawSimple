@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
+
 public class LoginPage {
     private WebDriver driver;
 
@@ -18,6 +21,7 @@ public class LoginPage {
     private By password = By.name("password");
     private By loginbtn = By.cssSelector(".btn.btn-outline-light.btn-lg.px-5");
     private By forgotPwdLink = By.linkText("Forgot Your Password");
+    private By edit_job_title_btn = By.xpath("/html/body/div/div/div[2]/table/tbody/tr[4]/td[1]/button");
 
 
     // Constructor of the page class
@@ -31,7 +35,6 @@ public class LoginPage {
     public String getLoginPageTitle()
     {
         return driver.getTitle();
-
     }
 
     public void enterUserName(String name)
@@ -67,6 +70,8 @@ public class LoginPage {
     public void clickLoginbtn(){
 
         driver.findElement(loginbtn).click();
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("edit_job_title_btn")));
     }
 
     public boolean isForgotPwd()

@@ -6,17 +6,15 @@ Feature: lawyer profile feature
     When user enters username "slawyer2@yopmail.com"
     And user enters password "Test123#"
     And user clicks on Login button
-#    Then user gets the title of the page
-#    And page title should be "law-frontend"
 
 
-  Scenario: verify Lawyer Profile page title
-    Given user is on lawyerprofile page
-    When user gets the title of the page
-    Then page title should be "law-frontend"
+  Scenario: update Lawyer Profile page title
 
-  Scenario: Complete lawyer profile
+    When user is on lawyerprofile page
+    Then user gets the title of the page
     When user enter job title
+    Then user enter job "lAWYER TEST"
+#    Then user click on save
 
 
 

@@ -22,6 +22,7 @@ public class Login {
     public void user_gets_the_title_of_the_page() {
         Title = loginpage.getLoginPageTitle();
        System.out.println("login page title is:" + Title);
+
     }
 
     @Then("page title should be {string}")
@@ -55,6 +56,8 @@ public class Login {
     @When("user clicks on Login button")
     public void user_clicks_on_login_button() {
         loginpage.clickLoginbtn();
+
+
     }
 
 }

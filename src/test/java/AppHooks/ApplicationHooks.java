@@ -30,11 +30,7 @@ public class ApplicationHooks {
         driverFactory = new DriverFact();
         driver = driverFactory.init_driver(browserName);
     }
-    @Before(order = 1, value = "@runFirst")
-    public void setUpForLoginFeature() {
-        System.out.println("Setting up for the login feature");
-        // Your code to set up for the login feature
-    }
+
     @After(order = 0)
     public void quitBrowser() {
         //driver.quit();
