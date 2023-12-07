@@ -26,8 +26,7 @@ public class LawyerProfile {
 
     @Then("user click on save")
     public void user_click_on_save() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        lawyer.save_job();
     }
 
 }
