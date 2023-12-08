@@ -20,24 +20,29 @@ public class LawyerProfile {
     }
 
     @Then("user enter job {string}")
-    public void user_enter_job(String jobname) {
+    public void user_enter_job(String jobname)
+    {
         lawyer.enterjob(jobname);
     }
 
-    @Then("user click on save")
-    public void user_click_on_save() {
+    @Then("user click on save changes job title")
+    public void user_click_on_save_changes_job_title() {
         lawyer.save_job();
     }
 
     @When("user click law firm name icon")
     public void user_click_law_firm_name_icon() {
-
+    lawyer.click_law_firmname_icon();
     }
 
     @Then("user enter law firm name {string}")
-    public void user_enter_law_firm_name(String string) {
+    public void user_enter_law_firm_name(String firmname) {
+    lawyer.enter_law_firmname(firmname);
 
-
+    }
+    @Then("user click on save changes firm name")
+    public void user_click_on_save_changes_firm_name() {
+        lawyer.save_firm();
     }
 
     @When("user click link to website icon")
