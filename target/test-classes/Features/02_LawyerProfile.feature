@@ -14,7 +14,12 @@ Feature: lawyer profile feature
     Then user gets the title of the page
     When user enter job title
     Then user enter job "lAWYER TEST"
+    Then user click on save
+#    When user click law firm name icon
+#    Then user enter law firm name "lAWYER TEST"
 #    Then user click on save
+
+
 
 
 
