@@ -67,12 +67,20 @@ public class LawyerProfile {
 
     @When("user click consultation icon")
     public void user_click_consultation_icon() {
+        lawyer.click_consultation_icon();
 
     }
 
     @Then("user enter consultation {string}")
-    public void user_enter_consultation(String string) {
+    public void user_enter_consultation_minutes(String minute) {
+        lawyer.enter_consultation_minutes(minute);
 
     }
+    @Then("user click on save")
+    public void user_click_on_save() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 
 }

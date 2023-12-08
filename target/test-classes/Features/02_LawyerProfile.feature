@@ -24,9 +24,9 @@ Feature: lawyer profile feature
 #    When user click about me icon
 #    Then user enter about me "lAWYER TEST"
 #    Then user click on save
-#    When user click consultation icon
-#    Then user enter consultation "lAWYER TEST"
-#    Then user click on save
+    When user click consultation icon
+    Then user enter consultation "10"
+    Then user click on save
 
 
 
