@@ -29,4 +29,45 @@ public class LawyerProfile {
         lawyer.save_job();
     }
 
+    @When("user click law firm name icon")
+    public void user_click_law_firm_name_icon() {
+
+    }
+
+    @Then("user enter law firm name {string}")
+    public void user_enter_law_firm_name(String string) {
+
+
+    }
+
+    @When("user click link to website icon")
+    public void user_click_link_to_website_icon() {
+
+    }
+
+    @Then("user enter website link {string}")
+    public void user_enter_website_link(String string) {
+
+    }
+
+    @When("user click about me icon")
+    public void user_click_about_me_icon() {
+
+    }
+
+    @Then("user enter about me {string}")
+    public void user_enter_about_me(String string) {
+
+    }
+
+    @When("user click consultation icon")
+    public void user_click_consultation_icon() {
+
+    }
+
+    @Then("user enter consultation {string}")
+    public void user_enter_consultation(String string) {
+
+    }
+
 }
