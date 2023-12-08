@@ -14,7 +14,22 @@ Feature: lawyer profile feature
     Then user gets the title of the page
     When user enter job title
     Then user enter job "lAWYER TEST"
-    Then user click on save
+    Then user click on save changes job title
+    When user click law firm name icon
+    Then user enter law firm name "ABC LAWYER CO."
+    Then user click on save changes firm name
+#    When user click link to website icon
+#    Then user enter website link "lAWYER TEST"
+#    Then user click on save
+#    When user click about me icon
+#    Then user enter about me "lAWYER TEST"
+#    Then user click on save
+#    When user click consultation icon
+#    Then user enter consultation "lAWYER TEST"
+#    Then user click on save
+
+
+
 
 
 
