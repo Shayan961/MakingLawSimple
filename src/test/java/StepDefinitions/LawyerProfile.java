@@ -97,12 +97,12 @@ public class LawyerProfile {
     @Then("user select value from dropdown")
     public void user_select_value_from_dropdown() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        lawyer.select_dropdown_value();
     }
     @Then("user click on save area of pratcice")
     public void user_click_on_save_area_of_pratcice() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 
