@@ -27,6 +27,9 @@ Feature: lawyer profile feature
     When user click consultation icon
     Then user enter consultation "10"
     Then user click on save
+    When user click on Area of practice icon
+    Then user select value from dropdown
+    Then user click on save area of pratcice
 
 
 

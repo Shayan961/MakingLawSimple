@@ -78,9 +78,25 @@ public class LawyerProfile {
     }
     @Then("user click on save")
     public void user_click_on_save() {
+        lawyer.save();
+    }
+
+
+    @When("user click on Area of practice icon")
+    public void user_click_on_area_of_practice_icon() {
+        lawyer.Click_area_of_interest_icon();
+    }
+    @Then("user select value from dropdown")
+    public void user_select_value_from_dropdown() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+    @Then("user click on save area of pratcice")
+    public void user_click_on_save_area_of_pratcice() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 
 
 }
