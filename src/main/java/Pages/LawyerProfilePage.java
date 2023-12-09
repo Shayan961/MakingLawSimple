@@ -1,14 +1,14 @@
 package Pages;
 
 import DriverFactory.DriverFact;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.util.List;
 
 
 public class LawyerProfilePage {
@@ -37,10 +37,8 @@ public class LawyerProfilePage {
     private By consultation_ok = By.xpath("/html/body/div[2]/div/div[6]/button[1]");
     private By Discounted_radio_btn = By.xpath("//*[@id=\"freeFirstConsultationRadio\"]/div[2]/label");
     private By consultation_fee_input = By.xpath("//*[@id=\"freeFirstConsultationFee\"]");
-    private By area_interest_drpdwn = By.xpath("//*[@id=\"vs1__combobox\"]");
-    private By edit_state_icon = By.xpath("/html/body/div/div/div[2]/table/tbody/tr[13]/td[1]/button");
-    private By click_state_dropdown_icon = By.xpath("/html/body/div[1]/div/div[2]/div[9]/div/div/div[2]/div/div/div[2]");
-    private By select_state = By.xpath("/html/body/div[1]/div/div[2]/div[9]/div/div/div[2]/div/div/div[1]/span/text()");
+    private By area_interest_drpdwn = By.xpath("//*[@id=\"vs1__combobox\"]/div[1]/input"); //*[@id="vs1__combobox"]/div[1]/input
+    private  By drp_value= By.xpath("//*[@id=\"vs1__combobox\"]/div[1]/span");
 
     public LawyerProfilePage(WebDriver driver) {
         this.driver = driver;
@@ -262,30 +260,17 @@ public class LawyerProfilePage {
             JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", element);
         }
-    public void Click_edit_state_icon()
-    {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(edit_state_icon));
 
+        public void select_dropdown_value()
+        {
 
-        // Click on the button using JavaScript
-        WebElement element = driver.findElement(edit_state_icon);
+            WebElement dropdown = new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(area_interest_drpdwn));
+            // Locate the dropdown container
+            //WebElement dropdown = driver.findElement(area_interest_drpdwn);
+            dropdown.click();
+            dropdown.sendKeys("b");
+            dropdown.sendKeys(Keys.ENTER);
+            driver.findElement(By.xpath("//*[@id=\"AreaModal\"]/div/div/div[2]/button")).click();
 
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", element);
-    }
-    public void click_state_dropdown_icon()
-    {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(click_state_dropdown_icon));
-
-
-        // Click on the button using JavaScript
-        WebElement element = driver.findElement(click_state_dropdown_icon);
-
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", element);
-
-    }
-
-    }
+//
+        }}
