@@ -47,22 +47,30 @@ public class LawyerProfile {
 
     @When("user click link to website icon")
     public void user_click_link_to_website_icon() {
-
+    lawyer.click_link_to_website_icon();
     }
 
     @Then("user enter website link {string}")
-    public void user_enter_website_link(String string) {
-
+    public void user_enter_website_link(String link) {
+    lawyer.enter_website_link(link);
+    }
+    @Then("user click on save changes website link button")
+    public void user_click_on_save_changes_website_link_button() {
+       lawyer.save_websitelink();
     }
 
     @When("user click about me icon")
     public void user_click_about_me_icon() {
-
+    lawyer.click_about_me_icon();
     }
 
     @Then("user enter about me {string}")
-    public void user_enter_about_me(String string) {
-
+    public void user_enter_about_me(String aboutme) {
+    lawyer.enter_about_me(aboutme);
+    }
+    @Then("user click on save about me button")
+    public void user_click_on_save_about_me_button() {
+    lawyer.save_about_me();
     }
 
     @When("user click consultation icon")

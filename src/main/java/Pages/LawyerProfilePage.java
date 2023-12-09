@@ -21,26 +21,22 @@ public class LawyerProfilePage {
     private By ok_button = By.xpath("/html/body/div[2]/div/div[6]/button[1]");
     private By edit_law_firmname_icon = By.xpath("/html/body/div/div/div[2]/table/tbody/tr[5]/td[1]/button");
     private By firmname_field = By.xpath("/html/body/div[1]/div/div[2]/div[3]/div/div/div[2]/div/input");
-    private By edit_Consultation_icon = By.xpath("//*[@id=\"app\"]/div/div[2]/table/tbody/tr[9]/td[1]/button/i");
-
-    private By consultation_type_free = By.xpath("//*[@id=\"freeFirstConsultationRadio\"]/div[1]");
-
-    private By edit_Area_of_interest = By.xpath("//*[@id=\"app\"]/div/div[2]/table/tbody/tr[12]/td[1]/button");
-
     private By firm_save_button = By.cssSelector("#FirmName > div > div > div.modal-body > div > button");
-
+    private By edit_link_to_website_icon = By.xpath("/html/body/div/div/div[2]/table/tbody/tr[6]/td[1]/button");
+    private By link_to_website_field = By.xpath("/html/body/div[1]/div/div[2]/div[4]/div/div/div[2]/div/input");
+    private By link_to_website_save_button = By.xpath("/html/body/div[1]/div/div[2]/div[4]/div/div/div[2]/div/button");
+    private By edit_about_me_icon = By.xpath("/html/body/div/div/div[2]/table/tbody/tr[8]/td[1]/button");
+    private By about_me_field = By.xpath("/html/body/div[1]/div/div[2]/div[7]/div/div/div[2]/div/input");
+    private By about_me_save_button = By.xpath("/html/body/div[1]/div/div[2]/div[7]/div/div/div[2]/div/button");
+    private By edit_Consultation_icon = By.xpath("//*[@id=\"app\"]/div/div[2]/table/tbody/tr[9]/td[1]/button/i");
+    private By consultation_type_free = By.xpath("//*[@id=\"freeFirstConsultationRadio\"]/div[1]");
+    private By edit_Area_of_interest = By.xpath("//*[@id=\"app\"]/div/div[2]/table/tbody/tr[12]/td[1]/button");
     private By minutes_input = By.xpath("//*[@id=\"freeFirstConsultationMinutes\"]");
-
     private By consultation_details_save = By.xpath("//*[@id=\"ConsultationModal\"]/div/div/div[2]/button");
-
     private By consultation_save_sucess = By.xpath("//*[@id=\"swal2-html-container\"]");
-
     private By consultation_ok = By.xpath("/html/body/div[2]/div/div[6]/button[1]");
-
     private By Discounted_radio_btn = By.xpath("//*[@id=\"freeFirstConsultationRadio\"]/div[2]/label");
-
     private By consultation_fee_input = By.xpath("//*[@id=\"freeFirstConsultationFee\"]");
-
     private By area_interest_drpdwn = By.xpath("//*[@id=\"vs1__combobox\"]");
 
     public LawyerProfilePage(WebDriver driver) {
@@ -103,7 +99,6 @@ public class LawyerProfilePage {
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", element);
     }
-
     public void enter_law_firmname(String firmnamee) {
 
         WebElement firmname = new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(firmname_field));
@@ -121,6 +116,76 @@ public class LawyerProfilePage {
     public void save_firm() {
 
         driver.findElement(firm_save_button).click();
+        WebElement usernameElement1 = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(Job_save_success));
+
+        String actualMessage = usernameElement1.getText();
+        System.out.println(actualMessage);
+        String expectedMessage = "Profile updated successfully";
+        Assert.assertEquals(expectedMessage, actualMessage, "Verification failed: The values are not equal");
+        WebElement usernameElement3 = new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(ok_button));
+        usernameElement3.click();
+    }
+    public void click_link_to_website_icon() {
+        // Wait for the button to be clickable for up to 30 seconds
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(edit_link_to_website_icon));
+
+        // Click on the button using JavaScript
+        WebElement element = driver.findElement(edit_link_to_website_icon);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", element);
+    }
+    public void enter_website_link(String websitelink) {
+
+        WebElement weblink = new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(link_to_website_field));
+        if (!weblink.getAttribute("value").isEmpty()) {
+//            If it's filled, clear the input field
+            weblink.clear();
+        }
+        // try {
+        WebElement usernameElement = new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(link_to_website_field));
+        System.out.println("Input field is clickable. Entering text: " + websitelink);
+        usernameElement.sendKeys(websitelink);
+
+    }
+    public void save_websitelink() {
+
+        driver.findElement(link_to_website_save_button).click();
+        WebElement usernameElement1 = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(Job_save_success));
+
+        String actualMessage = usernameElement1.getText();
+        System.out.println(actualMessage);
+        String expectedMessage = "Profile updated successfully";
+        Assert.assertEquals(expectedMessage, actualMessage, "Verification failed: The values are not equal");
+        WebElement usernameElement3 = new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(ok_button));
+        usernameElement3.click();
+    }
+    public void click_about_me_icon() {
+        // Wait for the button to be clickable for up to 30 seconds
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(edit_about_me_icon));
+
+        // Click on the button using JavaScript
+        WebElement element = driver.findElement(edit_about_me_icon);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", element);
+    }
+    public void enter_about_me(String about_me) {
+
+        WebElement aboutme = new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(about_me_field));
+        if (!aboutme.getAttribute("value").isEmpty()) {
+//            If it's filled, clear the input field
+            aboutme.clear();
+        }
+        // try {
+        WebElement usernameElement = new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(about_me_field));
+        System.out.println("Input field is clickable. Entering text: " + about_me);
+        usernameElement.sendKeys(about_me);
+
+    }
+    public void save_about_me() {
+
+        driver.findElement(about_me_save_button).click();
         WebElement usernameElement1 = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(Job_save_success));
 
         String actualMessage = usernameElement1.getText();

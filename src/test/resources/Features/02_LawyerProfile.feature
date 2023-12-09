@@ -18,12 +18,12 @@ Feature: lawyer profile feature
     When user click law firm name icon
     Then user enter law firm name "ABC LAWYER CO."
     Then user click on save changes firm name
-#    When user click link to website icon
-#    Then user enter website link "lAWYER TEST"
-#    Then user click on save
-#    When user click about me icon
-#    Then user enter about me "lAWYER TEST"
-#    Then user click on save
+    When user click link to website icon
+    Then user enter website link "https://makinglawsimple.staginganideos.com/"
+    Then user click on save changes website link button
+    When user click about me icon
+    Then user enter about me "Senior Lawyer"
+    Then user click on save about me button
     When user click consultation icon
     Then user enter consultation "10"
     Then user click on save
