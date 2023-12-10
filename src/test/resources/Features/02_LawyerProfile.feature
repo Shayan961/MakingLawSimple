@@ -12,6 +12,7 @@ Feature: lawyer profile feature
 
     When user is on lawyerprofile page
     Then user gets the title of the page
+
     When user enter job title
     Then user enter job "lAWYER TEST"
     Then user click on save changes job title

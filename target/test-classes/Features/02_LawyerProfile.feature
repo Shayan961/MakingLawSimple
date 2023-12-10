@@ -12,6 +12,7 @@ Feature: lawyer profile feature
 
     When user is on lawyerprofile page
     Then user gets the title of the page
+
     When user enter job title
     Then user enter job "lAWYER TEST"
     Then user click on save changes job title
@@ -33,6 +34,7 @@ Feature: lawyer profile feature
     When user click on Area of practice icon
     Then user select value from dropdown
     Then user click on save area of pratcice
+
 
 
 
