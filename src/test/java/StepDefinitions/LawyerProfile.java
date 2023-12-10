@@ -85,19 +85,25 @@ public class LawyerProfile {
         lawyer.enter_consultation_minutes(minute);
 
     }
-    @Then("user click on save")
-    public void user_click_on_save() {
-        lawyer.save();
+    @Then("user click on consultation save button")
+    public void user_click_on_consultation_save_button() {
+        lawyer.save_consultation();
     }
 
-
+    @Then("user check offer Remote Consultations")
+    public void user_check_offer_remote_consultations() {
+    lawyer.remote_consultations_CheckboxChecked();
+    }
+    @Then("user check mobile friendly checkbox")
+    public void user_check_mobile_friendly_checkbox() {
+    lawyer.Mobile_friendly_Checkbox_not_Checked();
+    }
     @When("user click on Area of practice icon")
     public void user_click_on_area_of_practice_icon() {
         lawyer.Click_area_of_interest_icon();
     }
     @Then("user select value from dropdown")
     public void user_select_value_from_dropdown() {
-        // Write code here that turns the phrase above into concrete actions
 
         lawyer.select_dropdown_value();
     }
@@ -105,6 +111,12 @@ public class LawyerProfile {
     public void user_click_on_save_area_of_pratcice() {
 
     }
+
+    @When("user click on choose file for profile picture")
+    public void user_click_on_choose_file_for_profile_picture() {
+        lawyer.whenTheUserSelectsAndUploadsAPicture();
+    }
+
     @When("user click on state territory icon")
     public void user_click_on_state_territory_icon() {
     lawyer.Click_edit_state_icon();
