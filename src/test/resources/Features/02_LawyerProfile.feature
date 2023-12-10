@@ -26,7 +26,10 @@ Feature: lawyer profile feature
     Then user click on save about me button
     When user click consultation icon
     Then user enter consultation "10"
-    Then user click on save
+    Then user click on consultation save button
+    Then user check offer Remote Consultations
+    Then user check mobile friendly checkbox
+    When user click on choose file for profile picture
     When user click on Area of practice icon
     Then user select value from dropdown
     Then user click on save area of pratcice
