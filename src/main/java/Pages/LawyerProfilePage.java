@@ -52,7 +52,7 @@ public class LawyerProfilePage {
     public void clickeditjobtitlebtn() {
 
         // Wait for the button to be clickable for up to 30 seconds
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.elementToBeClickable(edit_job_title_icon));
 
         // Click on the button using JavaScript

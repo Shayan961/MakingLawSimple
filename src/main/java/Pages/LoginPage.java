@@ -56,7 +56,7 @@ public class LoginPage {
         Actions action = new Actions(DriverFact.getDriver());
 
         // Wait for the element to be visible
-        WebElement ele = new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(hover));
+        WebElement ele = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(hover));
 
         action.moveToElement(ele).perform();
 

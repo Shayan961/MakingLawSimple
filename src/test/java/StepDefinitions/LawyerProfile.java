@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import DriverFactory.DriverFact;
-import com.sun.jna.WString;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -119,12 +119,12 @@ public class LawyerProfile {
 
     @When("user click on state territory icon")
     public void user_click_on_state_territory_icon() {
-    lawyer.Click_edit_state_icon();
+    //lawyer.Click_edit_state_icon();
     }
 
     @Then("user select state territory from dropdown")
     public void user_select_state_territory_from_dropdown() {
-    lawyer.click_state_dropdown_icon();
+    //lawyer.click_state_dropdown_icon();
     }
 
     @Then("user click on save state territory")

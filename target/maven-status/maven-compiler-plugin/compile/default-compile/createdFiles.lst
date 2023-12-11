@@ -1,0 +1,6 @@
+Pages\LawyerProfilePage.class
+DriverFactory\DriverFact.class
+Pages\LoginPage.class
+Utilities\Constants.class
+Utilities\ConfigReader.class
+Utilities\ElementUtil.class
